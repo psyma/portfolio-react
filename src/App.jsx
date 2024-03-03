@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Button } from '@mui/material';
 
 export default class App extends Component {
     constructor(props) {
@@ -10,12 +11,12 @@ export default class App extends Component {
     }
 
     componentDidMount() {
-        console.log("Ok!")
+        console.log("App is mounted!")
     }
 
     render() {
         return <>
-            Hello World!
+            <Button variant="contained" color="success">Hello World!</Button>
         </>
     }
 }
