@@ -1,0 +1,14 @@
+version: '3'
+services:
+  nginx:
+    image: nginx:latest
+    container_name: portfolio-react
+    ports:
+      - "127.0.0.1:5173:80"
+    volumes:
+      - nginxdata:/var/lib/nginx/data
+      - ../dist:/usr/share/nginx/html
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+
+volumes:
+  nginxdata:
