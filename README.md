@@ -1,4 +1,5 @@
 # React + Vite
+# Node v20.11.1
 
 # Run this project using npm
 ```
