@@ -1,25 +1,25 @@
 import ReactDOM from 'react-dom/client'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { createHashRouter, RouterProvider } from 'react-router-dom'
 import App from './App.jsx'
 import Resume from './components/resume/resume.jsx'
 import Tutorial from './components/tutorial/tutorial.jsx'
 import Portfolio from './components/portfolio/portfolio.jsx'
 
-const router = createBrowserRouter([
+const router = createHashRouter([
     {
-        path: '/portfolio-react',
-        element: <App />
+        path: '/',
+        element: <App />,
     },
     {
-        path: '/portfolio-react/resume',
+        path: '/resume',
         element: <Resume />
     },
     {
-        path: '/portfolio-react/tutorial',
+        path: '/tutorial',
         element: <Tutorial />
     },
     {
-        path: '/portfolio-react/portfolio',
+        path: '/portfolio',
         element: <Portfolio />
     }
 ])
