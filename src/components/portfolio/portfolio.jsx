@@ -12,7 +12,6 @@ export default class Portfolio extends Component {
         }
 
         document.title = "Portfolio"
-        document.getElementById("icon").href = "/src/assets/P.svg"
     }
 
     componentDidMount() {

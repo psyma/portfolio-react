@@ -6,6 +6,7 @@ import {
 } from '@mui/material';
 
 import { Link } from "react-router-dom";
+import MoreIcon from '@mui/icons-material/MoreVert';
 
 export default class Header extends Component {
     constructor(props) {
@@ -65,17 +66,17 @@ export default class Header extends Component {
             onClose={this.handleMobileMenuClose}
         >
             <MenuItem>
-                <Button variant="contained" color="success">
+                <Button component={Link} to={'/portfolio-react/resume'} variant="contained" color="success">
                     RESUME
                 </Button>
             </MenuItem>
             <MenuItem>
-                <Button variant="contained" color="success">
+                <Button component={Link} to={'/portfolio-react/tutorial'} variant="contained" color="success"  >
                     TUTORIAL
                 </Button>
             </MenuItem>
             <MenuItem onClick={this.handleProfileMenuOpen}>
-                <Button variant="contained" color="success">
+                <Button component={Link} to={'/portfolio-react/portfolio'} variant="contained" color="success" >
                     PORTFOLIO
                 </Button>
             </MenuItem>
@@ -119,13 +120,13 @@ export default class Header extends Component {
                         </Typography>
                         <Box sx={{ flexGrow: 1 }} />
                         <Box sx={{ display: { xs: 'none', md: 'flex' }, "& > *:not(:last-child)": { marginRight: '1rem' } }}>
-                            <Button component={Link} to={'/resume'} variant="contained" color="success">
+                            <Button component={Link} to={'/portfolio-react/resume'} variant="contained" color="success">
                                 RESUME
                             </Button>
-                            <Button component={Link} to={'/tutorial'} variant="contained" color="success"  >
+                            <Button component={Link} to={'/portfolio-react/tutorial'} variant="contained" color="success"  >
                                 TUTORIAL
                             </Button>
-                            <Button component={Link} to={'/portfolio'} variant="contained" color="success" >
+                            <Button component={Link} to={'/portfolio-react/portfolio'} variant="contained" color="success" >
                                 PORTFOLIO
                             </Button>
                         </Box>
@@ -138,7 +139,9 @@ export default class Header extends Component {
                                 onClick={this.handleMobileMenuOpen}
                                 color="inherit"
                             >
+                                <MoreIcon />
                             </IconButton>
+
                         </Box>
                     </Toolbar>
                 </AppBar>

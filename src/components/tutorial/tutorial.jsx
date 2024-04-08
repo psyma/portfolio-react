@@ -12,7 +12,6 @@ export default class Tutorial extends Component {
         }
 
         document.title = "Tutorial"
-        document.getElementById("icon").href = "/src/assets/T.svg"
     }
 
     componentDidMount() {

@@ -12,7 +12,6 @@ export default class Resume extends Component {
         }
 
         document.title = "Resume"
-        document.getElementById("icon").href = "/src/assets/R.svg"
     }
 
     componentDidMount() {
