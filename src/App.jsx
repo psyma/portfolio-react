@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
-import { Button } from '@mui/material';  
 import FlipCameraAndroidIcon from '@mui/icons-material/FlipCameraAndroid';
+import { Button, Container } from '@mui/material';
 
+import "./App.css"
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 
+import Header from './components/header/header';
+
 export default class App extends Component {
     constructor(props) {
-        super(props);
+        super(props)
 
         this.state = {
 
@@ -22,10 +25,7 @@ export default class App extends Component {
 
     render() {
         return <>
-        
-            <Button variant="contained" color="success">
-                <FlipCameraAndroidIcon/> Hello World!
-            </Button>
+            <Header />
         </>
     }
 }
