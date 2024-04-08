@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import FlipCameraAndroidIcon from '@mui/icons-material/FlipCameraAndroid';
-import { Button, Container } from '@mui/material';
 
 import "./App.css"
 import '@fontsource/roboto/300.css';
@@ -9,6 +7,7 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 
 import Header from './components/header/header';
+import Portfolio from './components/portfolio/portfolio';
 
 export default class App extends Component {
     constructor(props) {
@@ -25,7 +24,7 @@ export default class App extends Component {
 
     render() {
         return <>
-            <Header />
+            <Portfolio />
         </>
     }
 }
