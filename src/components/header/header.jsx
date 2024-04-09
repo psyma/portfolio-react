@@ -69,12 +69,7 @@ export default class Header extends Component {
                 <Button component={Link} to={'/resume'} variant="contained" color="success">
                     RESUME
                 </Button>
-            </MenuItem>
-            <MenuItem>
-                <Button component={Link} to={'/tutorial'} variant="contained" color="success"  >
-                    TUTORIAL
-                </Button>
-            </MenuItem>
+            </MenuItem> 
             <MenuItem onClick={this.handleProfileMenuOpen}>
                 <Button component={Link} to={'/portfolio'} variant="contained" color="success" >
                     PORTFOLIO
@@ -122,26 +117,15 @@ export default class Header extends Component {
                         <Box sx={{ display: { xs: 'none', md: 'flex' }, "& > *:not(:last-child)": { marginRight: '1rem' } }}>
                             <Button component={Link} to={'/resume'} variant="contained" color="success">
                                 RESUME
-                            </Button>
-                            <Button component={Link} to={'/tutorial'} variant="contained" color="success"  >
-                                TUTORIAL
-                            </Button>
+                            </Button> 
                             <Button component={Link} to={'/portfolio'} variant="contained" color="success" >
                                 PORTFOLIO
                             </Button>
                         </Box>
                         <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
-                            <IconButton
-                                size="large"
-                                aria-label="show more"
-                                aria-controls={this.mobileMenuId}
-                                aria-haspopup="true"
-                                onClick={this.handleMobileMenuOpen}
-                                color="inherit"
-                            >
+                            <IconButton size="large" aria-label="show more" aria-controls={this.mobileMenuId} aria-haspopup="true" color="inherit" onClick={this.handleMobileMenuOpen}>
                                 <MoreIcon />
                             </IconButton>
-
                         </Box>
                     </Toolbar>
                 </AppBar>

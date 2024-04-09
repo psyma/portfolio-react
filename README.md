@@ -9,7 +9,8 @@
 
 # Run this project using docker
 ```
-1. cd docker
-2. npm run build
-3. docker compose up
+1. go to vite.config.js and change base: "/portfolio-react/" to base: "./portfolio-react/" 
+2. cd docker
+3. npm run build
+4. docker compose up
 ```
