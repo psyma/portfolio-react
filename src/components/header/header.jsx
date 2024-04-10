@@ -1,5 +1,3 @@
-import "./header.css"
-
 import React, { Component } from "react";
 import {
     AppBar, Box, Button, Toolbar, IconButton, Typography, Menu, MenuItem
@@ -7,6 +5,8 @@ import {
 
 import { Link } from "react-router-dom";
 import MoreIcon from '@mui/icons-material/MoreVert';
+
+import "./header.css"
 
 export default class Header extends Component {
     constructor(props) {
@@ -92,32 +92,30 @@ export default class Header extends Component {
     };
 
     render() {
-        return <>
-            
-                <AppBar position="sticky" sx={{ backgroundColor: "white" }}>
-                    <Toolbar>
-                        <Typography variant="h5" noWrap component="div" sx={{ color: "black" }}>
-                            {this.props.title}
-                        </Typography>
-                            <Box sx={{ flexGrow: 1 }} />
-                            <Box sx={{ display: { xs: 'none', md: 'flex' }, "& > *:not(:last-child)": { marginRight: '1rem' } }}>
-                            <Button component={Link} to={'/resume'} variant="contained" color="primary">
-                                RESUME
-                            </Button> 
-                            <Button component={Link} to={'/portfolio'} variant="contained" color="primary" >
-                                PORTFOLIO
-                            </Button>
-                        </Box>
-                        <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
-                            <IconButton size="large" aria-label="show more" aria-controls={this.mobileMenuId} aria-haspopup="true" color="black" onClick={this.handleMobileMenuOpen}>
-                                <MoreIcon />
-                            </IconButton>
-                        </Box>
-                    </Toolbar>
-                </AppBar>
-                <this.renderMobileMenu />
-                <this.renderMenu />
-           
+        return <> 
+            <AppBar position="sticky" sx={{ backgroundColor: "white" }}>
+                <Toolbar>
+                    <Typography variant="h5" noWrap component="div" sx={{ color: "black" }}>
+                        {this.props.title}
+                    </Typography>
+                        <Box sx={{ flexGrow: 1 }} />
+                        <Box sx={{ display: { xs: 'none', md: 'flex' }, "& > *:not(:last-child)": { marginRight: '1rem' } }}>
+                        <Button component={Link} to={'/resume'} variant="contained" color="primary">
+                            RESUME
+                        </Button> 
+                        <Button component={Link} to={'/portfolio'} variant="contained" color="primary" >
+                            PORTFOLIO
+                        </Button>
+                    </Box>
+                    <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
+                        <IconButton size="large" aria-label="show more" aria-controls={this.mobileMenuId} aria-haspopup="true" color="black" onClick={this.handleMobileMenuOpen}>
+                            <MoreIcon />
+                        </IconButton>
+                    </Box>
+                </Toolbar>
+            </AppBar>
+            <this.renderMobileMenu />
+            <this.renderMenu /> 
         </>
     }
 }

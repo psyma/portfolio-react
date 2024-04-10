@@ -1,7 +1,8 @@
-import { Component } from "react";
-import "./portfolio.css"
+import { Component } from "react"; 
 
 import Header from "../header/header";
+
+import "./portfolio.css"
 
 export default class Portfolio extends Component {
     constructor(props) {
