@@ -31,19 +31,12 @@ export default class Header extends Component {
     renderMenu = () => {
         return <Menu
             anchorEl={this.state.anchorEl}
-            anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-            }}
+            anchorOrigin={{ vertical: 'top', horizontal: 'right', }}
             id={this.menuId}
             keepMounted
-            transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-            }}
+            transformOrigin={{ vertical: 'top', horizontal: 'right', }}
             open={this.state.isMenuOpen}
-            onClose={this.handleMenuClose}
-        >
+            onClose={this.handleMenuClose}>
             <MenuItem onClick={this.handleMenuClose}>Profile</MenuItem>
             <MenuItem onClick={this.handleMenuClose}>My account</MenuItem>
         </Menu>
@@ -52,26 +45,19 @@ export default class Header extends Component {
     renderMobileMenu = () => {
         return <Menu
             anchorEl={this.state.mobileMoreAnchorEl}
-            anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-            }}
+            anchorOrigin={{ vertical: 'top', horizontal: 'right', }}
             id={this.mobileMenuId}
             keepMounted
-            transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-            }}
+            transformOrigin={{ vertical: 'top', horizontal: 'right', }}
             open={this.state.isMobileMenuOpen}
-            onClose={this.handleMobileMenuClose}
-        >
+            onClose={this.handleMobileMenuClose}>
             <MenuItem>
-                <Button component={Link} to={'/resume'} variant="contained" color="success">
+                <Button component={Link} to={'/resume'} variant="contained" color="primary">
                     RESUME
                 </Button>
             </MenuItem> 
             <MenuItem onClick={this.handleProfileMenuOpen}>
-                <Button component={Link} to={'/portfolio'} variant="contained" color="success" >
+                <Button component={Link} to={'/portfolio'} variant="contained" color="primary" >
                     PORTFOLIO
                 </Button>
             </MenuItem>
@@ -107,23 +93,23 @@ export default class Header extends Component {
 
     render() {
         return <>
-            <Box sx={{ flexGrow: 1 }}>
-                <AppBar position="static" sx={{ backgroundColor: "#627254" }}>
+            
+                <AppBar position="sticky" sx={{ backgroundColor: "white" }}>
                     <Toolbar>
-                        <Typography variant="h5" noWrap component="div" sx={{ color: "white" }}>
+                        <Typography variant="h5" noWrap component="div" sx={{ color: "black" }}>
                             {this.props.title}
                         </Typography>
-                        <Box sx={{ flexGrow: 1 }} />
-                        <Box sx={{ display: { xs: 'none', md: 'flex' }, "& > *:not(:last-child)": { marginRight: '1rem' } }}>
-                            <Button component={Link} to={'/resume'} variant="contained" color="success">
+                            <Box sx={{ flexGrow: 1 }} />
+                            <Box sx={{ display: { xs: 'none', md: 'flex' }, "& > *:not(:last-child)": { marginRight: '1rem' } }}>
+                            <Button component={Link} to={'/resume'} variant="contained" color="primary">
                                 RESUME
                             </Button> 
-                            <Button component={Link} to={'/portfolio'} variant="contained" color="success" >
+                            <Button component={Link} to={'/portfolio'} variant="contained" color="primary" >
                                 PORTFOLIO
                             </Button>
                         </Box>
                         <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
-                            <IconButton size="large" aria-label="show more" aria-controls={this.mobileMenuId} aria-haspopup="true" color="inherit" onClick={this.handleMobileMenuOpen}>
+                            <IconButton size="large" aria-label="show more" aria-controls={this.mobileMenuId} aria-haspopup="true" color="black" onClick={this.handleMobileMenuOpen}>
                                 <MoreIcon />
                             </IconButton>
                         </Box>
@@ -131,7 +117,7 @@ export default class Header extends Component {
                 </AppBar>
                 <this.renderMobileMenu />
                 <this.renderMenu />
-            </Box>
+           
         </>
     }
 }
