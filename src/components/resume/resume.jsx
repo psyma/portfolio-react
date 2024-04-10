@@ -28,9 +28,7 @@ export default class Resume extends Component {
         document.title = "Resume"   
     }
 
-    componentDidMount() {
-        console.log("Resume is mounted!")
-    }
+    componentDidMount() { }
 
     setThemeMode = async (themeMode) => {
         await this.setState({
@@ -46,8 +44,7 @@ export default class Resume extends Component {
         return <>  
             <ThemeProvider theme={this.state.theme}>
                 <div>
-                    <Header title="RESUME" setThemeMode={this.setThemeMode}/> 
-                
+                    <Header title="RESUME" setThemeMode={this.setThemeMode}/>  
                     <Grid container spacing={0}> 
                         <Grid item xs={12} md={4} lg={3}  sx={{ marginBottom: "0", marginTop: "0" }}>
                             <Paper
@@ -55,7 +52,8 @@ export default class Resume extends Component {
                                     p: 2, 
                                     display: 'flex', 
                                     height: "100%",
-                                    flexDirection: 'column' 
+                                    flexDirection: 'column',
+                                    borderRadius: "0%"
                                 }}>
                                 <Stack spacing={2}> 
                                     <div>
@@ -66,25 +64,25 @@ export default class Resume extends Component {
                                     </div> 
             
                                     <div>
-                                        <div style={{ margin: 2, display: "flex"  }}> 
+                                        <div style={{ display: "flex"  }}> 
                                             <EmailIcon style={{ marginRight: "0.2rem"}}/> 
                                             <Link href="mailto: rickbengimeda@gmail.com" underline="none" target="_blank" style={{ marginTop: "auto", marginBottom: "auto"}}>
                                                 rickbengimeda@gmail.com
                                             </Link>
                                         </div>
-                                        <div style={{ margin: 2,display: "flex" }}> 
+                                        <div style={{ display: "flex" }}> 
                                             <LinkedInIcon style={{ marginRight: "0.2rem"}}/> 
                                             <Link href="https://www.linkedin.com/in/rickben-anthony-gimeda-b5973875/" underline="none" target="_blank" style={{ marginTop: "auto", marginBottom: "auto" }}>
                                                 linkedin.com/in/rickben
                                             </Link>
                                         </div> 
-                                        <div style={{ margin: 2,display: "flex" }}> 
+                                        <div style={{ display: "flex" }}> 
                                             <GitHubIcon style={{ marginRight: "0.2rem"}}/> 
                                             <Link href="https://github.com/psyma" underline="none" target="_blank" style={{ marginTop: "auto", marginBottom: "auto" }}>
                                                 github.com/psyma
                                             </Link>
                                         </div> 
-                                        <div style={{ margin: 2,display: "flex" }}> 
+                                        <div style={{ display: "flex" }}> 
                                             <FacebookOutlinedIcon style={{ marginRight: "0.2rem"}}/> 
                                             <Link href="https://www.facebook.com/jpakingpotomen/" underline="none" target="_blank" style={{ marginTop: "auto", marginBottom: "auto" }}>
                                                 facebook.com/rickben
@@ -128,15 +126,15 @@ export default class Resume extends Component {
                                 </Stack>  
                             </Paper>
                         </Grid>  
-                        <Grid item xs={12} md={8} lg={9}  sx={{   marginBottom: "0", marginTop: "0" }}>
+                        <Grid item xs={12} md={8} lg={9}  sx={{ marginBottom: "0", marginTop: "0" }}>
                             <Paper
-                            sx={{
-                                p: 2,
-                                display: 'flex', 
-                                flexDirection: 'column', 
-                                height: "100%"
-                            }}
-                            >
+                                sx={{
+                                    p: 2,
+                                    display: 'flex', 
+                                    flexDirection: 'column', 
+                                    height: "100%", 
+                                    borderRadius: "0%"
+                                }}>
                             <Stack spacing={2}>
                                 <div>
                                     <Typography noWrap variant="h5" sx={{ marginTop: "1rem", fontWeight: "bold" }}>
@@ -152,7 +150,7 @@ export default class Resume extends Component {
                                     </Typography> 
                                     <div style={{ display: "flex"}}> 
                                         <Typography variant="h6">
-                                            Software Engineer - Nov 16, 2020 - Present
+                                            Software Engineer - <small>Nov 16, 2020 - Present</small>
                                         </Typography> 
                                     </div>
                                     <Typography variant="h6" sx={{ fontSize: "1rem", }}>
@@ -183,7 +181,7 @@ export default class Resume extends Component {
                                         <ListItem sx={{ display: 'list-item', marginLeft: "1rem" }}>
                                             <ListItemText 
                                                 primary="AI PROJECTS"
-                                                secondary="Project(s) powered by Artificial Intelligent e.g Object Detections, Segmentation, Trracking & etc"/>
+                                                secondary="Project(s) powered by artificial intelligent e.g object detections, segmentation, tracking & etc"/>
                                         </ListItem>
                                         <ListItem sx={{ display: 'list-item', marginLeft: "1rem" }}>
                                             <ListItemText 
@@ -193,7 +191,7 @@ export default class Resume extends Component {
                                         <ListItem sx={{ display: 'list-item', marginLeft: "1rem" }}>
                                             <ListItemText 
                                                 primary="IMAGE CROPPER"
-                                                secondary="Cropped a portion of an image that has text then process it using OCR"/>
+                                                secondary="Cropped a portion of an image that has text then process it using optical character recognition (OCR)"/>
                                         </ListItem> 
                                         
                                         <ListItem sx={{ display: 'list-item', marginLeft: "1rem" }}>
@@ -234,7 +232,7 @@ export default class Resume extends Component {
                                 </div>
                                 <div>
                                     <Typography noWrap variant="h5" sx={{ marginTop: "1rem", fontWeight: "bold" }}>
-                                        SKILLS, LANGUAGES & FRAMEWORK
+                                        LANGUAGES & FRAMEWORKS
                                     </Typography>  
                                     <List dense={true} sx={{ listStyleType: 'disc' }}>
                                         <ListItem sx={{ display: 'list-item', marginLeft: "1rem" }}>
@@ -262,8 +260,7 @@ export default class Resume extends Component {
                         </Grid>  
                     </Grid>     
                 </div> 
-            </ThemeProvider>
-             
+            </ThemeProvider> 
         </>
     }
 }

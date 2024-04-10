@@ -21,9 +21,7 @@ export default class Portfolio extends Component {
         document.title = "Portfolio"
     }
 
-    componentDidMount() {
-        console.log("Portfolio is mounted!")
-    }
+    componentDidMount() { }
 
     setThemeMode = async (themeMode) => {
         await this.setState({

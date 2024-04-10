@@ -27,9 +27,7 @@ export default class Header extends Component {
         this.mobileMenuId = 'primary-search-account-menu-mobile'; 
     }
 
-    componentDidMount() {
-        console.log("Header is mounted!")
-    }
+    componentDidMount() { }
 
 
     renderMenu = () => {
