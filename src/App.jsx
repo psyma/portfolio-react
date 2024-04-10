@@ -6,7 +6,7 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 
-import Portfolio from './components/portfolio/portfolio';
+import Portfolio from './components/portfolio/portfolio'; 
 
 export default class App extends Component {
     constructor(props) {
@@ -14,7 +14,7 @@ export default class App extends Component {
 
         this.state = {
 
-        }
+        } 
     }
 
     componentDidMount() {

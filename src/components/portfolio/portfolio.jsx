@@ -1,15 +1,21 @@
 import { Component } from "react"; 
 
 import Header from "../header/header";
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 
 import "./portfolio.css"
+import { Utils } from "../../utils";
 
 export default class Portfolio extends Component {
     constructor(props) {
-        super(props)
+        super(props) 
 
-        this.state = {
-
+        this.state = { 
+            theme: createTheme({
+                palette: {
+                  mode: Utils.themeMode,
+                },
+            })
         }
 
         document.title = "Portfolio"
@@ -19,10 +25,22 @@ export default class Portfolio extends Component {
         console.log("Portfolio is mounted!")
     }
 
+    setThemeMode = async (themeMode) => {
+        await this.setState({
+            theme: createTheme({
+                palette: {
+                  mode: themeMode,
+                },
+            })
+        })
+    }
+
     render() {
         return <>
-            <Header title="PORTFOLIO" />
-            I am portfolio
+            <ThemeProvider theme={this.state.theme}>
+                <Header title="PORTFOLIO" setThemeMode={this.setThemeMode}/>
+                    I am portfolio
+            </ThemeProvider> 
         </>
     }
 }

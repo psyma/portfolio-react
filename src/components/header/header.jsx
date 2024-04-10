@@ -4,9 +4,12 @@ import {
 } from '@mui/material';
 
 import { Link } from "react-router-dom";
-import MoreIcon from '@mui/icons-material/MoreVert';
+import MoreIcon from '@mui/icons-material/MoreVert'; 
+import Brightness4Icon from "@mui/icons-material/Brightness4";
+import Brightness7Icon from "@mui/icons-material/Brightness7";
 
 import "./header.css"
+import { Utils } from "../../utils";
 
 export default class Header extends Component {
     constructor(props) {
@@ -14,13 +17,14 @@ export default class Header extends Component {
 
         this.state = {
             anchorEl: null,
+            themeMode: Utils.themeMode,
             mobileMoreAnchorEl: null,
             isMenuOpen: false,
             isMobileMenuOpen: false
         }
 
         this.menuId = 'primary-search-account-menu';
-        this.mobileMenuId = 'primary-search-account-menu-mobile';
+        this.mobileMenuId = 'primary-search-account-menu-mobile'; 
     }
 
     componentDidMount() {
@@ -56,11 +60,11 @@ export default class Header extends Component {
                     RESUME
                 </Button>
             </MenuItem> 
-            <MenuItem onClick={this.handleProfileMenuOpen}>
+            <MenuItem>
                 <Button component={Link} to={'/portfolio'} variant="contained" color="primary" >
                     PORTFOLIO
                 </Button>
-            </MenuItem>
+            </MenuItem>  
         </Menu>
     }
 
@@ -91,25 +95,46 @@ export default class Header extends Component {
         })
     };
 
+    handleThemeMode = async (event) => {
+        if (this.state.themeMode == "light") {
+            await this.setState({
+                themeMode: "dark"
+            })
+        }
+        else {
+            await this.setState({
+                themeMode: "light"
+            })
+        }  
+        this.props.setThemeMode(this.state.themeMode)
+        Utils.themeMode = this.state.themeMode
+    }
+
     render() {
-        return <> 
-            <AppBar position="sticky" sx={{ backgroundColor: "white" }}>
+        return <>  
+            <AppBar position="sticky" sx={{ }}> 
                 <Toolbar>
-                    <Typography variant="h5" noWrap component="div" sx={{ color: "black" }}>
+                    <Typography variant="h5" noWrap component="div" sx={{  }}>
                         {this.props.title}
                     </Typography>
                         <Box sx={{ flexGrow: 1 }} />
                         <Box sx={{ display: { xs: 'none', md: 'flex' }, "& > *:not(:last-child)": { marginRight: '1rem' } }}>
-                        <Button component={Link} to={'/resume'} variant="contained" color="primary">
+                        <Button component={Link} to={'/resume'} variant="contained">
                             RESUME
                         </Button> 
-                        <Button component={Link} to={'/portfolio'} variant="contained" color="primary" >
+                        <Button component={Link} to={'/portfolio'} variant="contained">
                             PORTFOLIO
                         </Button>
+                        <IconButton color="inherit" onClick={this.handleThemeMode}>
+                            {this.state.themeMode === "dark" ? <Brightness7Icon /> : <Brightness4Icon />} 
+                        </IconButton>
                     </Box>
                     <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
-                        <IconButton size="large" aria-label="show more" aria-controls={this.mobileMenuId} aria-haspopup="true" color="black" onClick={this.handleMobileMenuOpen}>
+                        <IconButton size="large" aria-label="show more" aria-controls={this.mobileMenuId} aria-haspopup="true" onClick={this.handleMobileMenuOpen}>
                             <MoreIcon />
+                        </IconButton>
+                        <IconButton color="inherit" onClick={this.handleThemeMode}>
+                            {this.state.themeMode === "dark" ? <Brightness7Icon /> : <Brightness4Icon />} 
                         </IconButton>
                     </Box>
                 </Toolbar>
