@@ -1,7 +1,9 @@
 import { Component } from "react";
 import {
-    Avatar, Grid, Link, List, ListItem, ListItemText, Paper, Stack, Typography, Tabs, Tab, Box
-} from '@mui/material';
+    Avatar, Box, Card, CardMedia, CardContent, Container, Grid, Link, List, ListItem, ListItemText, Paper, Stack, Typography, Tabs, Tab
+} from "@mui/material";
+
+import { TabList, TabPanel, TabContext } from "@mui/lab";
 
 import Header from "../header/header";
 import EmailIcon from '@mui/icons-material/Email';
@@ -18,6 +20,7 @@ export default class Portfolio extends Component {
         super(props)
 
         this.state = {
+            tabValue: '1',
             theme: createTheme({
                 palette: {
                     mode: Utils.themeMode,
@@ -38,6 +41,12 @@ export default class Portfolio extends Component {
                     mode: themeMode,
                 },
             })
+        })
+    }
+
+    handleTabContextChange = async (event, value) => {
+        await this.setState({
+            tabValue: value
         })
     }
 
@@ -92,7 +101,153 @@ export default class Portfolio extends Component {
                                     borderRadius: "0%"
                                 }}>
                                 <Stack spacing={2}>
-
+                                    <Typography variant="h4" sx={{ alignSelf: "center" }}>
+                                        PROJECTS
+                                    </Typography>
+                                    <TabContext value={this.state.tabValue}>
+                                        <Box sx={{ borderBottom: 1, borderColor: 'divider', alignSelf: "center" }}>
+                                            <TabList onChange={this.handleTabContextChange} aria-label="lab API tabs example">
+                                                <Tab label="OLD" value="1" />
+                                                <Tab label="NEW" value="2" />
+                                            </TabList>
+                                        </Box>
+                                        <TabPanel value="1">
+                                            <Stack spacing={5}>
+                                                <Card>
+                                                    <CardMedia
+                                                        sx={{ objectFit: "fill", aspectRatio: "2.5" }}
+                                                        component="img"
+                                                        image="./assets/thumbnails/puzzle.png"
+                                                        title="puzzle game" />
+                                                    <CardContent>
+                                                        <Typography gutterBottom variant="h5" component="div">
+                                                            PUZZLE GAME
+                                                        </Typography>
+                                                        <Typography variant="body2">
+                                                            The Puzzle Game is the last C# project I created.
+                                                            It was during the early lockdown of March 2020,
+                                                            due to boredom I decided to create this.
+                                                            The game is the same as a typical puzzle game.
+                                                            You will just need to put everything in order for you to win.
+                                                            <Link href="https://github.com/PSYMA/Puzzle-Game-CSharp-WPF" underline="none" target="_blank" sx={{ marginLeft: "0.2rem" }}>source code</Link>
+                                                        </Typography>
+                                                    </CardContent>
+                                                </Card>
+                                                <Card>
+                                                    <CardMedia
+                                                        sx={{ objectFit: "fill", aspectRatio: "2.5" }}
+                                                        component="img"
+                                                        image="./assets/thumbnails/tictactoe.png"
+                                                        title="tic tac toe" />
+                                                    <CardContent>
+                                                        <Typography gutterBottom variant="h5" component="div">
+                                                            TIC TAC TOE
+                                                        </Typography>
+                                                        <Typography variant="body2">
+                                                            This Tic Tac Toe Game is my prelim project during my C# language course in college,
+                                                            this is not your traditional tic tac toe game,
+                                                            the game itself has more features and is way more graphical,
+                                                            The rules are the same.
+                                                            <Link href="https://github.com/PSYMA/TIC-TAC-TOE-CSharp-WPF" underline="none" target="_blank" sx={{ marginLeft: "0.2rem" }}>source code</Link>
+                                                        </Typography>
+                                                    </CardContent>
+                                                </Card>
+                                                <Card>
+                                                    <CardMedia
+                                                        sx={{ objectFit: "fill", aspectRatio: "2.5" }}
+                                                        component="img"
+                                                        image="./assets/thumbnails/match.png"
+                                                        title="The matching Game" />
+                                                    <CardContent>
+                                                        <Typography gutterBottom variant="h5" component="div">
+                                                            THE MATCHING GAME
+                                                        </Typography>
+                                                        <Typography variant="body2">
+                                                            This Matching Game is my midterm project during my C# language course in college,
+                                                            the game works by pairing its cell to the other cell,
+                                                            make mistakes and it will reduce your HP when HP goes to zero you lose
+                                                            <Link href="https://github.com/PSYMA/The-Matching-Game-CSharp-WPF-" underline="none" target="_blank" sx={{ marginLeft: "0.2rem" }}>source code</Link>
+                                                        </Typography>
+                                                    </CardContent>
+                                                </Card>
+                                                <Card>
+                                                    <CardMedia
+                                                        sx={{ objectFit: "fill", aspectRatio: "2.5" }}
+                                                        component="img"
+                                                        image="./assets/thumbnails/battle.png"
+                                                        title="The hidden battle game" />
+                                                    <CardContent>
+                                                        <Typography gutterBottom variant="h5" component="div">
+                                                            THE HIDDEN BATTLE GAME
+                                                        </Typography>
+                                                        <Typography variant="body2">
+                                                            This Hidden Battle Game is my final project during my C# language course in college,
+                                                            this is the most challenging project I created in C# so far took me a lot of time to finished.
+                                                            The game is derived from this board game
+                                                            <Link href="https://www.youtube.com/watch?v=4gHJlYLomrs%20target=" underline="none" target="_blank" sx={{ marginLeft: "0.2rem" }}>link</Link>.
+                                                            <Link href="https://github.com/PSYMA/The-Hidden-Game-Battle-CSharp-WPF-" underline="none" target="_blank" sx={{ marginLeft: "0.2rem" }}>source code</Link>
+                                                        </Typography>
+                                                    </CardContent>
+                                                </Card>
+                                                <Card>
+                                                    <CardMedia
+                                                        sx={{ objectFit: "fill", aspectRatio: "2.5" }}
+                                                        component="img"
+                                                        image="./assets/thumbnails/csLibrary.png"
+                                                        title="The pong game" />
+                                                    <CardContent>
+                                                        <Typography gutterBottom variant="h5" component="div">
+                                                            LIBRARY SYSTEM GUI
+                                                        </Typography>
+                                                        <Typography variant="body2">
+                                                            This Library System is the upgraded version of my Simple Library System in C++,
+                                                            it's integrated with SQLite and offers a couple of features and it's graphical and user friendly.
+                                                            I decided to create this project to expose myself to a database project.
+                                                            <Link href="https://github.com/PSYMA/Library-System-CSharp-WPF" underline="none" target="_blank" sx={{ marginLeft: "0.2rem" }}>source code</Link>
+                                                        </Typography>
+                                                    </CardContent>
+                                                </Card>
+                                                <Card>
+                                                    <CardMedia
+                                                        sx={{ objectFit: "fill", aspectRatio: "2.5" }}
+                                                        component="img"
+                                                        image="./assets/thumbnails/pong.png"
+                                                        title="The pong game" />
+                                                    <CardContent>
+                                                        <Typography gutterBottom variant="h5" component="div">
+                                                            THE PONG GAME
+                                                        </Typography>
+                                                        <Typography variant="body2">
+                                                            This is one of my very first projects back in my early days in programming C language,
+                                                            in particular, The is game quite simple all you need to do is to control the paddle and catch the ball,
+                                                            make sure to catch the ball otherwise you will lose. clear all-stars and you win.
+                                                            <Link href="https://github.com/psyma/Ping-pong-Game-simple-Cpp-Console" underline="none" target="_blank" sx={{ marginLeft: "0.2rem" }}>source code</Link>
+                                                        </Typography>
+                                                    </CardContent>
+                                                </Card>
+                                                <Card>
+                                                    <CardMedia
+                                                        sx={{ objectFit: "fill", aspectRatio: "2.5" }}
+                                                        component="img"
+                                                        image="./assets/thumbnails/cppLibrary.png"
+                                                        title="Library system" />
+                                                    <CardContent>
+                                                        <Typography gutterBottom variant="h5" component="div">
+                                                            SIMPLE LIBRARY SYSTEM
+                                                        </Typography>
+                                                        <Typography variant="body2">
+                                                            This Simple Library System is my final project during my C language course.
+                                                            I struggle a lot during my creation of this project,
+                                                            I am still a newbie at that time.
+                                                            The project is quite easy: student borrow books as well return it.
+                                                            <Link href="https://github.com/PSYMA/Library-System-simple-C-Cpp-Console" underline="none" target="_blank" sx={{ marginLeft: "0.2rem" }}>source code</Link>
+                                                        </Typography>
+                                                    </CardContent>
+                                                </Card>
+                                            </Stack>
+                                        </TabPanel>
+                                        <TabPanel value="2">TODO</TabPanel>
+                                    </TabContext>
                                 </Stack>
                             </Paper>
                         </Grid>
