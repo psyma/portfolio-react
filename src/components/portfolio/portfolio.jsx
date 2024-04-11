@@ -66,7 +66,7 @@ export default class Portfolio extends Component {
                                     borderRadius: "0%"
                                 }}>
                                 <Stack spacing={2}>
-                                    <Avatar alt="Profile picture" src="./assets/profile.png" sx={{ width: 180, height: 180, alignSelf: "center" }} />
+                                    <Avatar alt="Profile picture" src="./assets/profile.png" sx={{ width: 200, height: 200, alignSelf: "center", borderRadius: "5%" }} />
                                     <p style={{ textIndent: "10%" }}>
                                         During my second year of the Bachelor of Science in Computer Engineering program in 2018, I began my programming career. My name is Rickben Anthony Q. Gimeda. I have a lot of difficulty in my programming classes, but eventually I grew to enjoy it because of how much I can accomplish in the area. Then, not too long after, I chose to become a programmer.
                                     </p>
