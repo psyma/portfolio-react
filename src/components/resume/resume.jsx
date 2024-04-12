@@ -4,6 +4,7 @@ import {
 } from '@mui/material';
 
 import Header from "../header/header";
+import Footer from "../footer/footer";
 import EmailIcon from '@mui/icons-material/Email';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -11,7 +12,6 @@ import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
 import FileDownloadIcon from '@mui/icons-material/FileDownload';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 
-import "./resume.css"
 import { Utils } from "../../utils";
 import html2pdf from 'html2pdf.js'
 
@@ -66,10 +66,13 @@ export default class Resume extends Component {
     render() {
         return <>
             <ThemeProvider theme={this.state.theme}>
+
                 <div id="resume">
+
                     <Header title="RESUME" setThemeMode={this.setThemeMode} />
+
                     <Grid container spacing={0}>
-                        <Grid item xs={12} md={4} lg={3} sx={{ marginBottom: "0", marginTop: "0", }} >
+                        <Grid item xs={12} md={4} lg={3}>
                             <Paper
                                 sx={{
                                     p: 2,
@@ -79,6 +82,7 @@ export default class Resume extends Component {
                                     borderRadius: "0%",
                                     alignSelf: "center"
                                 }}>
+
                                 <Stack spacing={2}>
                                     <div>
                                         <Avatar alt="Profile picture" src="./assets/profile.png" sx={{ width: "200px", height: "200px", borderRadius: "5%" }} />
@@ -150,7 +154,7 @@ export default class Resume extends Component {
                                 </Stack>
                             </Paper>
                         </Grid>
-                        <Grid item xs={12} md={8} lg={9} sx={{ marginBottom: "0", marginTop: "0" }}>
+                        <Grid item xs={12} md={8} lg={9}>
                             <Paper
                                 sx={{
                                     p: 2,
@@ -285,6 +289,11 @@ export default class Resume extends Component {
                                         </List>
                                     </div>
                                 </Stack>
+                            </Paper>
+                        </Grid>
+                        <Grid item xs={12}>
+                            <Paper sx={{ boxShadow: "none" }}>
+                                <Footer />
                             </Paper>
                         </Grid>
                     </Grid>

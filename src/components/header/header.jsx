@@ -8,7 +8,6 @@ import MoreIcon from '@mui/icons-material/MoreVert';
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import Brightness7Icon from "@mui/icons-material/Brightness7";
 
-import "./header.css"
 import { Utils } from "../../utils";
 
 export default class Header extends Component {

@@ -6,13 +6,13 @@ import {
 import { TabList, TabPanel, TabContext } from "@mui/lab";
 
 import Header from "../header/header";
+import Footer from "../footer/footer";
 import EmailIcon from '@mui/icons-material/Email';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 
-import "./portfolio.css"
 import { Utils } from "../../utils";
 
 export default class Portfolio extends Component {
@@ -56,7 +56,7 @@ export default class Portfolio extends Component {
                 <div>
                     <Header title="PORTFOLIO" setThemeMode={this.setThemeMode} />
                     <Grid container spacing={0}>
-                        <Grid item xs={12} md={4} lg={3} sx={{ marginBottom: "0", marginTop: "0" }}>
+                        <Grid item xs={12} md={4} lg={3}>
                             <Paper
                                 sx={{
                                     p: 2,
@@ -91,7 +91,7 @@ export default class Portfolio extends Component {
                                 </Stack>
                             </Paper>
                         </Grid>
-                        <Grid item xs={12} md={8} lg={9} sx={{ marginBottom: "0", marginTop: "0" }}>
+                        <Grid item xs={12} md={8} lg={9}>
                             <Paper
                                 sx={{
                                     p: 2,
@@ -249,6 +249,11 @@ export default class Portfolio extends Component {
                                         <TabPanel value="2">TODO</TabPanel>
                                     </TabContext>
                                 </Stack>
+                            </Paper>
+                        </Grid>
+                        <Grid item xs={12}>
+                            <Paper sx={{ boxShadow: "none" }}>
+                                <Footer />
                             </Paper>
                         </Grid>
                     </Grid>
