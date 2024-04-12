@@ -13,6 +13,7 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 
 import "./resume.css"
 import { Utils } from "../../utils";
+import html2pdf from 'html2pdf.js'
 
 export default class Resume extends Component {
     constructor(props) {
@@ -42,10 +43,30 @@ export default class Resume extends Component {
         })
     }
 
+    handleDownloadResume = async () => {
+        let btn = document.getElementById("downloadIcon")
+        let header = document.getElementById("header")
+        let element = document.getElementById("resume")
+
+        const options = {
+            filename: 'resume.pdf',
+            margin: 0,
+            image: { type: 'jpeg', quality: 1 },
+            html2canvas: { scale: 2 },
+            jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' },
+        };
+
+        btn.style.display = "none"
+        header.style.display = "none"
+        await html2pdf().set(options).from(element).save()
+        btn.style.display = "inline-block"
+        header.style.display = "flex"
+    }
+
     render() {
         return <>
             <ThemeProvider theme={this.state.theme}>
-                <div>
+                <div id="resume">
                     <Header title="RESUME" setThemeMode={this.setThemeMode} />
                     <Grid container spacing={0}>
                         <Grid item xs={12} md={4} lg={3} sx={{ marginBottom: "0", marginTop: "0", }} >
@@ -60,8 +81,8 @@ export default class Resume extends Component {
                                 }}>
                                 <Stack spacing={2}>
                                     <div>
-                                        <Avatar alt="Profile picture" src="./assets/profile.png" sx={{ width: 200, height: 200, borderRadius: "5%" }} />
-                                        <Typography noWrap variant="h6">
+                                        <Avatar alt="Profile picture" src="./assets/profile.png" sx={{ width: "200px", height: "200px", borderRadius: "5%" }} />
+                                        <Typography variant="h6">
                                             Rickben Anthony Gimeda
                                         </Typography>
                                     </div>
@@ -138,12 +159,12 @@ export default class Resume extends Component {
                                     height: "100%",
                                     borderRadius: "0%"
                                 }}>
-                                <Stack spacing={2}>
+                                <Stack>
                                     <div>
                                         <Typography noWrap variant="h5" sx={{ marginTop: "1rem", fontWeight: "bold" }}>
                                             CAREER PROFILE
                                             <Tooltip title="Download this resume in pdf">
-                                                <IconButton>
+                                                <IconButton id="downloadIcon" onClick={this.handleDownloadResume}>
                                                     <FileDownloadIcon />
                                                 </IconButton>
                                             </Tooltip>

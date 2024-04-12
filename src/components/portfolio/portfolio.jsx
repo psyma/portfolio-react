@@ -100,7 +100,7 @@ export default class Portfolio extends Component {
                                     height: "100%",
                                     borderRadius: "0%"
                                 }}>
-                                <Stack spacing={2}>
+                                <Stack>
                                     <Typography variant="h4" sx={{ alignSelf: "center" }}>
                                         PROJECTS
                                     </Typography>
