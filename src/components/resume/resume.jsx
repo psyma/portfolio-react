@@ -124,13 +124,25 @@ export default class Resume extends Component {
                                         </Typography>
                                         <List>
                                             <ListItemText
-                                                primary="Primary Education"
+                                                primary={
+                                                    <Typography variant="h6">
+                                                        Primary Education
+                                                    </Typography>
+                                                }
                                                 secondary="Umapad Elementary School 2002-2008" />
                                             <ListItemText
-                                                primary="Secondary Education"
+                                                primary={
+                                                    <Typography variant="h6">
+                                                        Secondary Education
+                                                    </Typography>
+                                                }
                                                 secondary="Don Gerardo Ll. Ouano MNHS 2008-2012" />
                                             <ListItemText
-                                                primary="Tertiary"
+                                                primary={
+                                                    <Typography variant="h6">
+                                                        Tertiary
+                                                    </Typography>
+                                                }
                                                 secondary="University of Cebu-Banilad BSCpE 2017-2020 (UG)" />
                                         </List>
                                     </div>
@@ -141,13 +153,25 @@ export default class Resume extends Component {
                                         </Typography>
                                         <List>
                                             <ListItemText
-                                                primary="Bisaya"
+                                                primary={
+                                                    <Typography variant="h6">
+                                                        Bisaya
+                                                    </Typography>
+                                                }
                                                 secondary="Native" />
                                             <ListItemText
-                                                primary="English"
+                                                primary={
+                                                    <Typography variant="h6">
+                                                        English
+                                                    </Typography>
+                                                }
                                                 secondary="Intermediate" />
                                             <ListItemText
-                                                primary="Tagalog"
+                                                primary={
+                                                    <Typography variant="h6">
+                                                        Tagalog
+                                                    </Typography>
+                                                }
                                                 secondary="Intermediate" />
                                         </List>
                                     </div>
@@ -163,7 +187,7 @@ export default class Resume extends Component {
                                     height: "100%",
                                     borderRadius: "0%"
                                 }}>
-                                <Stack>
+                                <Stack spacing={1}>
                                     <div>
                                         <Typography noWrap variant="h5" sx={{ marginTop: "1rem", fontWeight: "bold" }}>
                                             CAREER PROFILE
@@ -173,33 +197,36 @@ export default class Resume extends Component {
                                                 </IconButton>
                                             </Tooltip>
                                         </Typography>
-                                        <p>
+                                        <Typography sx={{ textAlign: "justify" }}>
                                             I started studying programming in 2018 and have since expanded my knowledge to include Web, games, APIs, and open-source libraries. enhancing my knowledge of object-oriented programming, data structures, and algorithms. I also like making things from the ground up. I'm making an effort to enhance my programming knowledge.
-                                        </p>
+                                        </Typography>
                                     </div>
                                     <div>
                                         <Typography noWrap variant="h5" sx={{ marginTop: "1rem", fontWeight: "bold" }}>
                                             EXPERIENCES
                                         </Typography>
-                                        <div style={{ display: "flex" }}>
-                                            <Typography variant="h6">
-                                                Software Engineer - <small>Nov 16, 2020 - Present</small>
+                                        <div style={{ marginTop: "0.5rem" }}>
+                                            <div style={{ display: "flex" }}>
+                                                <Typography variant="h6">
+                                                    Software Engineer -
+                                                </Typography>
+                                                <small style={{ marginTop: "auto", marginBottom: "auto", marginLeft: "0.5rem" }}>Nov 16, 2020 - Present</small>
+                                            </div>
+                                            <Typography variant="h6" >
+                                                <small>Cebu Skyland Universal Inc.</small>
+                                            </Typography>
+                                            <Typography sx={{ textAlign: "justify" }}>
+                                                As a software engineer, my duties include writing, debugging, testing, and maintaining the code. I also assist others, like writing and planning what to do with their current task. I'm ready to taking on any kind of assignment that is assigned to me; if I don't know how to accomplish anything, I'll just have to research it. Like using third-party programs or an open-source libraries to use it on our existing/current projects.
                                             </Typography>
                                         </div>
-                                        <Typography variant="h6" sx={{ fontSize: "1rem", }}>
-                                            Cebu Skyland Universal Inc.
-                                        </Typography>
-                                        <p>
-                                            As a software engineer, my duties include writing, debugging, testing, and maintaining the code. I also assist others, like writing and planning what to do with their current task. I'm ready to taking on any kind of assignment that is assigned to me; if I don't know how to accomplish anything, I'll just have to research it. Like using third-party programs or an open-source libraries to use it on our existing/current projects.
-                                        </p>
                                     </div>
                                     <div>
                                         <Typography noWrap variant="h5" sx={{ marginTop: "1rem", fontWeight: "bold" }}>
                                             PROJECTS
                                         </Typography>
-                                        <p>
+                                        <Typography sx={{ textAlign: "justify" }}>
                                             List of projects that I'm responsible for developing and maintaining. and also third-party programs and open-source libraries where we study and integrate it with our current existing/projects.
-                                        </p>
+                                        </Typography>
                                         <List dense={true} sx={{ listStyleType: 'disc' }}>
                                             <ListItem sx={{ display: 'list-item', marginLeft: "1rem" }}>
                                                 <ListItemText
@@ -235,11 +262,12 @@ export default class Resume extends Component {
                                         </List>
                                     </div>
                                     <div>
-                                        <Typography noWrap variant="h5" sx={{ marginTop: "1rem", fontWeight: "bold" }}>
+                                        <Typography noWrap variant="h5" sx={{ fontWeight: "bold" }}>
                                             RESPONSIBILITIES
                                         </Typography>
-                                        <p>
-                                            List of responsibilities that I usually do as a software engineer                            </p>
+                                        <Typography>
+                                            List of responsibilities that I usually do as a software engineer
+                                        </Typography>
                                         <List dense={true} sx={{ listStyleType: 'disc' }}>
                                             <ListItem sx={{ display: 'list-item', marginLeft: "1rem" }}>
                                                 <ListItemText
@@ -264,7 +292,7 @@ export default class Resume extends Component {
                                         </List>
                                     </div>
                                     <div>
-                                        <Typography noWrap variant="h5" sx={{ marginTop: "1rem", fontWeight: "bold" }}>
+                                        <Typography noWrap variant="h5" sx={{ fontWeight: "bold" }}>
                                             LANGUAGES & FRAMEWORKS
                                         </Typography>
                                         <List dense={true} sx={{ listStyleType: 'disc' }}>

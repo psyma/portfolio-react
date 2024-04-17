@@ -67,14 +67,13 @@ export default class Portfolio extends Component {
                                 }}>
                                 <Stack spacing={2}>
                                     <Avatar alt="Profile picture" src="./assets/profile.png" sx={{ width: 200, height: 200, alignSelf: "center", borderRadius: "5%" }} />
-                                    <p style={{ textIndent: "10%" }}>
+                                    <Typography style={{ textIndent: "10%", textAlign: "justify" }}>
                                         During my second year of the Bachelor of Science in Computer Engineering program in 2018, I began my programming career. My name is Rickben Anthony Q. Gimeda. I have a lot of difficulty in my programming classes, but eventually I grew to enjoy it because of how much I can accomplish in the area. Then, not too long after, I chose to become a programmer.
-                                    </p>
-                                    <p style={{ textIndent: "10%" }}>
+                                    </Typography>
+                                    <Typography style={{ textIndent: "10%", textAlign: "justify" }}>
                                         As part of my practice, I have created a few projects in C++ and C#; the most of these are school projects, and I have learned more about data structures, algorithms, and object-oriented programming. I'm now working toward my aim of becoming a skilled developer with the hopes of soon landing my ideal position as a software engineer.
-                                    </p>
-
-                                    <div style={{ display: "flex", justifyContent: "center" }}>
+                                    </Typography>
+                                    <Container style={{ display: "flex", justifyContent: "center" }}>
                                         <Link href="mailto: rickbengimeda@gmail.com" underline="none" target="_blank" style={{ marginTop: "auto", marginBottom: "auto" }}>
                                             <EmailIcon style={{ marginRight: "0.5rem" }} />
                                         </Link>
@@ -87,7 +86,7 @@ export default class Portfolio extends Component {
                                         <Link href="https://www.facebook.com/jpakingpotomen/" underline="none" target="_blank" style={{ marginTop: "auto", marginBottom: "auto" }}>
                                             <FacebookOutlinedIcon style={{ marginRight: "0.5rem" }} />
                                         </Link>
-                                    </div>
+                                    </Container>
                                 </Stack>
                             </Paper>
                         </Grid>
@@ -123,7 +122,7 @@ export default class Portfolio extends Component {
                                                         <Typography gutterBottom variant="h5" component="div">
                                                             PUZZLE GAME
                                                         </Typography>
-                                                        <Typography variant="body2">
+                                                        <Typography variant="body2" sx={{ textAlign: "justify" }}>
                                                             The Puzzle Game is the last C# project I created.
                                                             It was during the early lockdown of March 2020,
                                                             due to boredom I decided to create this.
@@ -143,7 +142,7 @@ export default class Portfolio extends Component {
                                                         <Typography gutterBottom variant="h5" component="div">
                                                             TIC TAC TOE
                                                         </Typography>
-                                                        <Typography variant="body2">
+                                                        <Typography variant="body2" sx={{ textAlign: "justify" }}>
                                                             This Tic Tac Toe Game is my prelim project during my C# language course in college,
                                                             this is not your traditional tic tac toe game,
                                                             the game itself has more features and is way more graphical,
@@ -162,7 +161,7 @@ export default class Portfolio extends Component {
                                                         <Typography gutterBottom variant="h5" component="div">
                                                             THE MATCHING GAME
                                                         </Typography>
-                                                        <Typography variant="body2">
+                                                        <Typography variant="body2" sx={{ textAlign: "justify" }}>
                                                             This Matching Game is my midterm project during my C# language course in college,
                                                             the game works by pairing its cell to the other cell,
                                                             make mistakes and it will reduce your HP when HP goes to zero you lose
@@ -180,7 +179,7 @@ export default class Portfolio extends Component {
                                                         <Typography gutterBottom variant="h5" component="div">
                                                             THE HIDDEN BATTLE GAME
                                                         </Typography>
-                                                        <Typography variant="body2">
+                                                        <Typography variant="body2" sx={{ textAlign: "justify" }}>
                                                             This Hidden Battle Game is my final project during my C# language course in college,
                                                             this is the most challenging project I created in C# so far took me a lot of time to finished.
                                                             The game is derived from this board game
@@ -199,7 +198,7 @@ export default class Portfolio extends Component {
                                                         <Typography gutterBottom variant="h5" component="div">
                                                             LIBRARY SYSTEM GUI
                                                         </Typography>
-                                                        <Typography variant="body2">
+                                                        <Typography variant="body2" sx={{ textAlign: "justify" }}>
                                                             This Library System is the upgraded version of my Simple Library System in C++,
                                                             it's integrated with SQLite and offers a couple of features and it's graphical and user friendly.
                                                             I decided to create this project to expose myself to a database project.
@@ -217,7 +216,7 @@ export default class Portfolio extends Component {
                                                         <Typography gutterBottom variant="h5" component="div">
                                                             THE PONG GAME
                                                         </Typography>
-                                                        <Typography variant="body2">
+                                                        <Typography variant="body2" sx={{ textAlign: "justify" }}>
                                                             This is one of my very first projects back in my early days in programming C language,
                                                             in particular, The is game quite simple all you need to do is to control the paddle and catch the ball,
                                                             make sure to catch the ball otherwise you will lose. clear all-stars and you win.
@@ -235,7 +234,7 @@ export default class Portfolio extends Component {
                                                         <Typography gutterBottom variant="h5" component="div">
                                                             SIMPLE LIBRARY SYSTEM
                                                         </Typography>
-                                                        <Typography variant="body2">
+                                                        <Typography variant="body2" sx={{ textAlign: "justify" }}>
                                                             This Simple Library System is my final project during my C language course.
                                                             I struggle a lot during my creation of this project,
                                                             I am still a newbie at that time.

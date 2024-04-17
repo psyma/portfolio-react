@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import CopyrightIcon from '@mui/icons-material/Copyright';
+import { Container, Typography } from "@mui/material";
 
 export default class Footer extends Component {
     constructor(props) {
@@ -15,12 +16,12 @@ export default class Footer extends Component {
 
     render() {
         return <>
-            <div style={{ display: "flex", justifyContent: "center" }}>
-                <CopyrightIcon />
-                <p style={{ marginTop: "auto", marginBottom: "auto" }}>
-                    {new Date().getFullYear()} Rickben Gimeda. All Rights Reserved.
-                </p>
-            </div>
+            <Container sx={{ display: "flex", justifyContent: "center", flexDirection: { xs: "column", md: "row" }, alignItems: "center" }}  >
+                <Typography sx={{ display: "flex", mr: 1 }}>
+                    <CopyrightIcon style={{ fontSize: "smaller", marginTop: "auto", marginBottom: "auto" }} />
+                    <small> {new Date().getFullYear()} Portfolio-React. All rights reserved.</small>
+                </Typography>
+            </Container>
         </>
     }
 }
