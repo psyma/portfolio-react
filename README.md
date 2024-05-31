@@ -14,3 +14,8 @@
 3. npm run build
 4. docker compose up
 ```
+
+# Deploy this project
+```
+1. npm run deploy
+```
