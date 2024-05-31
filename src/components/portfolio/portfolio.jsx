@@ -1,6 +1,7 @@
 import { Component } from "react";
 import {
-    Avatar, Box, Card, CardMedia, CardContent, Container, Grid, Link, Paper, Stack, Typography, Tabs, Tab
+    Avatar, Box, Card, CardMedia, CardContent, Container, Grid, Link, Paper, Stack, Typography, Tabs, Tab,
+    CssBaseline
 } from "@mui/material";
 
 import { TabList, TabPanel, TabContext } from "@mui/lab";
@@ -53,6 +54,7 @@ export default class Portfolio extends Component {
     render() {
         return <>
             <ThemeProvider theme={this.state.theme}>
+                <CssBaseline />
                 <div>
                     <Header title="PORTFOLIO" setThemeMode={this.setThemeMode} />
                     <Container sx={{ mt: "1rem" }}>
@@ -254,6 +256,7 @@ export default class Portfolio extends Component {
                             </Grid>
                         </Grid>
                     </Container>
+                    <Footer />
                 </div>
             </ThemeProvider>
         </>
