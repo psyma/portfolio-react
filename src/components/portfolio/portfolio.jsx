@@ -1,6 +1,6 @@
 import { Component } from "react";
 import {
-    Avatar, Box, Card, CardMedia, CardContent, Container, Grid, Link, List, ListItem, ListItemText, Paper, Stack, Typography, Tabs, Tab
+    Avatar, Box, Card, CardMedia, CardContent, Container, Grid, Link, Paper, Stack, Typography, Tabs, Tab
 } from "@mui/material";
 
 import { TabList, TabPanel, TabContext } from "@mui/lab";
@@ -55,23 +55,16 @@ export default class Portfolio extends Component {
             <ThemeProvider theme={this.state.theme}>
                 <div>
                     <Header title="PORTFOLIO" setThemeMode={this.setThemeMode} />
-                    <Grid container spacing={0}>
-                        <Grid item xs={12} md={4} lg={3}>
-                            <Paper
-                                sx={{
-                                    p: 2,
-                                    display: 'flex',
-                                    height: "100%",
-                                    flexDirection: 'column',
-                                    borderRadius: "0%"
-                                }}>
-                                <Stack spacing={2}>
+                    <Container sx={{ mt: "1rem" }}>
+                        <Grid container>
+                            <Grid item xs={12} md={4} lg={4} >
+                                <Stack spacing={2} style={{ position: "sticky", top: 120 }}>
                                     <Avatar alt="Profile picture" src="./assets/profile.png" sx={{ width: 200, height: 200, alignSelf: "center", borderRadius: "5%" }} />
                                     <Typography style={{ textIndent: "10%", textAlign: "justify" }}>
-                                        During my second year of the Bachelor of Science in Computer Engineering program in 2018, I began my programming career. My name is Rickben Anthony Q. Gimeda. I have a lot of difficulty in my programming classes, but eventually I grew to enjoy it because of how much I can accomplish in the area. Then, not too long after, I chose to become a programmer.
+                                        My name is Rickben Anthony Q. Gimeda, and I began my programming career during my second year of the Bachelor of Science in Computer Engineering program in 2018. Initially, I encountered significant challenges in my programming classes. However, over time, I developed a deep appreciation for the field and its potential. This newfound passion ultimately led me to pursue a career as a programmer.
                                     </Typography>
-                                    <Typography style={{ textIndent: "10%", textAlign: "justify" }}>
-                                        As part of my practice, I have created a few projects in C++ and C#; the most of these are school projects, and I have learned more about data structures, algorithms, and object-oriented programming. I'm now working toward my aim of becoming a skilled developer with the hopes of soon landing my ideal position as a software engineer.
+                                    <Typography style={{ textAlign: "justify" }}>
+                                        As part of my practice, I have developed several projects in C++ and C#, primarily as part of my academic coursework. Through these projects, I have gained valuable experience in data structures, algorithms, and object-oriented programming. I am currently working towards my goal of becoming a skilled developer, with the aspiration of securing my ideal position as a software engineer in the near future.
                                     </Typography>
                                     <Container style={{ display: "flex", justifyContent: "center" }}>
                                         <Link href="mailto: rickbengimeda@gmail.com" underline="none" target="_blank" style={{ marginTop: "auto", marginBottom: "auto" }}>
@@ -88,19 +81,10 @@ export default class Portfolio extends Component {
                                         </Link>
                                     </Container>
                                 </Stack>
-                            </Paper>
-                        </Grid>
-                        <Grid item xs={12} md={8} lg={9}>
-                            <Paper
-                                sx={{
-                                    p: 2,
-                                    display: 'flex',
-                                    flexDirection: 'column',
-                                    height: "100%",
-                                    borderRadius: "0%"
-                                }}>
+                            </Grid>
+                            <Grid item xs={12} md={8} lg={8}>
                                 <Stack>
-                                    <Typography variant="h4" sx={{ alignSelf: "center" }}>
+                                    <Typography variant="h4" sx={{ alignSelf: "center", mt: { xs: 5, md: 5, lg: 5 } }}>
                                         PROJECTS
                                     </Typography>
                                     <TabContext value={this.state.tabValue}>
@@ -245,17 +229,31 @@ export default class Portfolio extends Component {
                                                 </Card>
                                             </Stack>
                                         </TabPanel>
-                                        <TabPanel value="2">TODO</TabPanel>
+                                        <TabPanel value="2">
+                                            <Stack spacing={5}>
+                                                <Card>
+                                                    <CardMedia
+                                                        sx={{ objectFit: "fill", aspectRatio: "2.5" }}
+                                                        component="img"
+                                                        image="./assets/thumbnails/codeflowerhorn.png"
+                                                        title="puzzle game" />
+                                                    <CardContent>
+                                                        <Typography gutterBottom variant="h5" component="div">
+                                                            WEBSITE BLOG
+                                                        </Typography>
+                                                        <Typography variant="body2" sx={{ textAlign: "justify" }}>
+                                                            I created a website blog to share my knowledge about programming in various selected languages. This platform serves as a resource for fellow programmers, providing tutorials, insights, and best practices across different programming languages. Through this blog, I aim to contribute to the programming community by offering valuable information and fostering learning and growth.
+                                                            <Link href="https://codeflowerhorn.com" underline="none" target="_blank" sx={{ marginLeft: "0.2rem" }}>link</Link>
+                                                        </Typography>
+                                                    </CardContent>
+                                                </Card>
+                                            </Stack>
+                                        </TabPanel>
                                     </TabContext>
                                 </Stack>
-                            </Paper>
+                            </Grid>
                         </Grid>
-                        <Grid item xs={12}>
-                            <Paper sx={{ boxShadow: "none" }}>
-                                <Footer />
-                            </Paper>
-                        </Grid>
-                    </Grid>
+                    </Container>
                 </div>
             </ThemeProvider>
         </>
