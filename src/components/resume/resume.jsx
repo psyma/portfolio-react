@@ -15,6 +15,14 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { Utils } from "../../utils";
 import html2pdf from 'html2pdf.js'
 
+import { TbBrandCpp } from "react-icons/tb";
+import { FaPython } from "react-icons/fa";
+import { RiReactjsFill } from "react-icons/ri";
+import { FaSymfony } from "react-icons/fa";
+import { PiFileHtmlBold } from "react-icons/pi";
+import { IoLogoJavascript } from "react-icons/io5";
+import { SiCsharp } from "react-icons/si";
+
 export default class Resume extends Component {
     constructor(props) {
         super(props)
@@ -271,26 +279,61 @@ export default class Resume extends Component {
                                         </Typography>
                                         <List dense={true} sx={{ listStyleType: 'disc' }}>
                                             <ListItem sx={{ display: 'list-item', marginLeft: "1rem" }}>
-                                                <ListItemText primary="C/C++" />
+                                                <ListItemText primary={  
+                                                    <div style={{ display: "flex", alignItems: "center"}}>
+                                                        <TbBrandCpp style={{marginRight: "0.5rem", fontSize: "large"}}/>
+                                                        C/C++
+                                                    </div>
+                                                } />
                                             </ListItem>
                                             <ListItem sx={{ display: 'list-item', marginLeft: "1rem" }}>
-                                                <ListItemText primary="PYTHON" />
+                                            <ListItemText primary={  
+                                                    <div style={{ display: "flex", alignItems: "center"}}>
+                                                        <FaPython style={{marginRight: "0.5rem", fontSize: "large"}}/>
+                                                        PYTHON
+                                                    </div>
+                                                } />
                                             </ListItem> 
                                             <ListItem sx={{ display: 'list-item', marginLeft: "1rem" }}>
-                                                <ListItemText primary="REACTJS" />
+                                            <ListItemText primary={  
+                                                    <div style={{ display: "flex", alignItems: "center"}}>
+                                                        <RiReactjsFill style={{marginRight: "0.5rem", fontSize: "large"}}/>
+                                                        REACTJS
+                                                    </div>
+                                                } />
                                             </ListItem>
                                             <ListItem sx={{ display: 'list-item', marginLeft: "1rem" }}>
-                                                <ListItemText primary="SYMFONY" />
+                                            <ListItemText primary={  
+                                                    <div style={{ display: "flex", alignItems: "center"}}>
+                                                        <FaSymfony style={{marginRight: "0.5rem", fontSize: "large"}}/>
+                                                        SYMFONY
+                                                    </div>
+                                                } />
                                             </ListItem>
                                             <ListItem sx={{ display: 'list-item', marginLeft: "1rem" }}>
-                                                <ListItemText primary="HTML/CSS" />
+                                            <ListItemText primary={  
+                                                    <div style={{ display: "flex", alignItems: "center"}}>
+                                                        <PiFileHtmlBold style={{marginRight: "0.5rem", fontSize: "large"}}/>
+                                                        HTML/CSS
+                                                    </div>
+                                                } />
                                             </ListItem>
                                             <ListItem sx={{ display: 'list-item', marginLeft: "1rem" }}>
-                                                <ListItemText primary="JAVASCRIPT" />
+                                            <ListItemText primary={  
+                                                    <div style={{ display: "flex", alignItems: "center"}}>
+                                                        <IoLogoJavascript style={{marginRight: "0.5rem", fontSize: "large"}}/>
+                                                        JAVASCRIPT
+                                                    </div>
+                                                } />
                                             </ListItem>
                                             <ListItem sx={{ display: 'list-item', marginLeft: "1rem" }}>
-                                                <ListItemText primary="C# .NET & C# ASP.NET CORE" />
-                                            </ListItem>
+                                                <ListItemText primary={  
+                                                    <div style={{ display: "flex", alignItems: "center"}}>
+                                                        <SiCsharp style={{marginRight: "0.5rem", fontSize: "large"}}/>
+                                                        C# .NET & C# ASP.NET CORE
+                                                    </div>
+                                                } />
+                                             </ListItem>
                                         </List>
                                     </div>
                                 </Stack>
