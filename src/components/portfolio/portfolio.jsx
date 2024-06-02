@@ -60,7 +60,7 @@ export default class Portfolio extends Component {
                     <Container sx={{ mt: "1rem" }}>
                         <Grid container>
                             <Grid item xs={12} md={4} lg={4} >
-                                <Stack spacing={2} style={{ position: "sticky", top: 120 }}>
+                                <Stack spacing={2}>
                                     <Avatar alt="Profile picture" src="./assets/profile.png" sx={{ width: 200, height: 200, alignSelf: "center", borderRadius: "5%" }} />
                                     <Typography style={{ textIndent: "10%", textAlign: "justify" }}>
                                         My name is Rickben Anthony Q. Gimeda, and I began my programming career during my second year of the Bachelor of Science in Computer Engineering program in 2018. Initially, I encountered significant challenges in my programming classes. However, over time, I developed a deep appreciation for the field and its potential. This newfound passion ultimately led me to pursue a career as a programmer.
@@ -86,7 +86,7 @@ export default class Portfolio extends Component {
                             </Grid>
                             <Grid item xs={12} md={8} lg={8}>
                                 <Stack>
-                                    <Typography variant="h4" sx={{ alignSelf: "center", mt: { xs: 5, md: 5, lg: 5 } }}>
+                                    <Typography variant="h4" sx={{ alignSelf: "center" }}>
                                         PROJECTS
                                     </Typography>
                                     <TabContext value={this.state.tabValue}>

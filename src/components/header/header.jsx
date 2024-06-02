@@ -109,7 +109,7 @@ export default class Header extends Component {
 
     render() {
         return <>
-            <AppBar position="sticky" sx={{}} id="header">
+            <AppBar position="relative" id="header">
                 <Toolbar>
                     <Typography variant="h5" noWrap component="div" sx={{}}>
                         {this.props.title}

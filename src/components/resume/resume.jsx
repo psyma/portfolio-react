@@ -72,7 +72,7 @@ export default class Resume extends Component {
                     <Container sx={{ mt: "1rem" }}>
                         <Grid container>
                             <Grid item xs={12} md={4} lg={4}>
-                                <Stack spacing={2} style={{ position: "sticky", top: 100 }}>
+                                <Stack spacing={2}>
                                     <div>
                                         <Avatar alt="Profile picture" src="./assets/profile.png" sx={{ width: "200px", height: "200px", borderRadius: "5%" }} />
                                         <Typography variant="h6">
@@ -169,7 +169,7 @@ export default class Resume extends Component {
                             <Grid item xs={12} md={8} lg={8}>
                                 <Stack spacing={1}>
                                     <div>
-                                        <Typography noWrap variant="h5" sx={{ marginTop: "1rem", fontWeight: "bold" }}>
+                                        <Typography noWrap variant="h5" sx={{ fontWeight: "bold" }}>
                                             CAREER PROFILE
                                             <Tooltip title="Download this resume in pdf">
                                                 <IconButton id="downloadIcon" onClick={this.handleDownloadResume}>
