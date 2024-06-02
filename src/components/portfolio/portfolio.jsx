@@ -109,11 +109,7 @@ export default class Portfolio extends Component {
                                                             PUZZLE GAME
                                                         </Typography>
                                                         <Typography variant="body2" sx={{ textAlign: "justify" }}>
-                                                            The Puzzle Game is the last C# project I created.
-                                                            It was during the early lockdown of March 2020,
-                                                            due to boredom I decided to create this.
-                                                            The game is the same as a typical puzzle game.
-                                                            You will just need to put everything in order for you to win.
+                                                        The Puzzle Game is the most recent project I developed using C#. I created this game in March 2020 during the early stages of the lockdown as a way to stay productive. The game follows the traditional puzzle format, requiring players to arrange pieces correctly to achieve victory.
                                                             <Link href="https://github.com/PSYMA/Puzzle-Game-CSharp-WPF" underline="none" target="_blank" sx={{ marginLeft: "0.2rem" }}>source code</Link>
                                                         </Typography>
                                                     </CardContent>
@@ -129,10 +125,7 @@ export default class Portfolio extends Component {
                                                             TIC TAC TOE
                                                         </Typography>
                                                         <Typography variant="body2" sx={{ textAlign: "justify" }}>
-                                                            This Tic Tac Toe Game is my prelim project during my C# language course in college,
-                                                            this is not your traditional tic tac toe game,
-                                                            the game itself has more features and is way more graphical,
-                                                            The rules are the same.
+                                                        This Tic Tac Toe Game was my preliminary project for my C# programming course in college. Unlike traditional Tic Tac Toe, this version includes additional features and enhanced graphics. However, the fundamental rules of the game remain the same.
                                                             <Link href="https://github.com/PSYMA/TIC-TAC-TOE-CSharp-WPF" underline="none" target="_blank" sx={{ marginLeft: "0.2rem" }}>source code</Link>
                                                         </Typography>
                                                     </CardContent>
@@ -148,9 +141,7 @@ export default class Portfolio extends Component {
                                                             THE MATCHING GAME
                                                         </Typography>
                                                         <Typography variant="body2" sx={{ textAlign: "justify" }}>
-                                                            This Matching Game is my midterm project during my C# language course in college,
-                                                            the game works by pairing its cell to the other cell,
-                                                            make mistakes and it will reduce your HP when HP goes to zero you lose
+                                                            This Matching Game was my midterm project for my C# programming course in college. The game involves pairing cells with their corresponding matches. Mistakes result in a reduction of HP, and if your HP reaches zero, you lose the game.
                                                             <Link href="https://github.com/PSYMA/The-Matching-Game-CSharp-WPF-" underline="none" target="_blank" sx={{ marginLeft: "0.2rem" }}>source code</Link>
                                                         </Typography>
                                                     </CardContent>
@@ -166,9 +157,7 @@ export default class Portfolio extends Component {
                                                             THE HIDDEN BATTLE GAME
                                                         </Typography>
                                                         <Typography variant="body2" sx={{ textAlign: "justify" }}>
-                                                            This Hidden Battle Game is my final project during my C# language course in college,
-                                                            this is the most challenging project I created in C# so far took me a lot of time to finished.
-                                                            The game is derived from this board game
+                                                            The Hidden Battle Game was my final project for my C# programming course in college. This is the most challenging project I have created in C# to date, requiring significant time and effort to complete. The game is based on a traditional board game.
                                                             <Link href="https://www.youtube.com/watch?v=4gHJlYLomrs%20target=" underline="none" target="_blank" sx={{ marginLeft: "0.2rem" }}>link</Link>.
                                                             <Link href="https://github.com/PSYMA/The-Hidden-Game-Battle-CSharp-WPF-" underline="none" target="_blank" sx={{ marginLeft: "0.2rem" }}>source code</Link>
                                                         </Typography>
@@ -185,9 +174,7 @@ export default class Portfolio extends Component {
                                                             LIBRARY SYSTEM GUI
                                                         </Typography>
                                                         <Typography variant="body2" sx={{ textAlign: "justify" }}>
-                                                            This Library System is the upgraded version of my Simple Library System in C++,
-                                                            it's integrated with SQLite and offers a couple of features and it's graphical and user friendly.
-                                                            I decided to create this project to expose myself to a database project.
+                                                            This Library System is an enhanced version of my Simple Library System developed in C++. It is integrated with SQLite, offers several features, and is both graphical and user-friendly. I created this project to gain experience with database integration.
                                                             <Link href="https://github.com/PSYMA/Library-System-CSharp-WPF" underline="none" target="_blank" sx={{ marginLeft: "0.2rem" }}>source code</Link>
                                                         </Typography>
                                                     </CardContent>
@@ -203,9 +190,7 @@ export default class Portfolio extends Component {
                                                             THE PONG GAME
                                                         </Typography>
                                                         <Typography variant="body2" sx={{ textAlign: "justify" }}>
-                                                            This is one of my very first projects back in my early days in programming C language,
-                                                            in particular, The is game quite simple all you need to do is to control the paddle and catch the ball,
-                                                            make sure to catch the ball otherwise you will lose. clear all-stars and you win.
+                                                            This is one of my earliest projects from my initial days of programming in C. The game is quite simple: you control a paddle to catch a ball. If you fail to catch the ball, you lose. Clear all the stars, and you win.
                                                             <Link href="https://github.com/psyma/Ping-pong-Game-simple-Cpp-Console" underline="none" target="_blank" sx={{ marginLeft: "0.2rem" }}>source code</Link>
                                                         </Typography>
                                                     </CardContent>
@@ -221,10 +206,7 @@ export default class Portfolio extends Component {
                                                             SIMPLE LIBRARY SYSTEM
                                                         </Typography>
                                                         <Typography variant="body2" sx={{ textAlign: "justify" }}>
-                                                            This Simple Library System is my final project during my C language course.
-                                                            I struggle a lot during my creation of this project,
-                                                            I am still a newbie at that time.
-                                                            The project is quite easy: student borrow books as well return it.
+                                                            This Simple Library System was my final project for my C language course. As a beginner at the time, I faced many challenges during its development. The system is straightforward, allowing students to borrow and return books.
                                                             <Link href="https://github.com/PSYMA/Library-System-simple-C-Cpp-Console" underline="none" target="_blank" sx={{ marginLeft: "0.2rem" }}>source code</Link>
                                                         </Typography>
                                                     </CardContent>

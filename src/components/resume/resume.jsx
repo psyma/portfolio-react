@@ -224,13 +224,8 @@ export default class Resume extends Component {
                                             </ListItem>
                                             <ListItem sx={{ display: 'list-item', marginLeft: "1rem" }}>
                                                 <ListItemText
-                                                    primary="CHAT SYSTEM"
-                                                    secondary="A simple chat system with map integration that needed for other project" />
-                                            </ListItem>
-                                            <ListItem sx={{ display: 'list-item', marginLeft: "1rem" }}>
-                                                <ListItemText
-                                                    primary="IMAGE CROPPER"
-                                                    secondary="Cropped a portion of an image that has text then process it using optical character recognition (OCR)" />
+                                                    primary="WEB APPLICATIONS"
+                                                    secondary="Any project(s) that is web related SSR/CSR, small/large application" />
                                             </ListItem>
 
                                             <ListItem sx={{ display: 'list-item', marginLeft: "1rem" }}>
