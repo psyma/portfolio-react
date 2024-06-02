@@ -274,10 +274,13 @@ export default class Resume extends Component {
                                                 <ListItemText primary="C/C++" />
                                             </ListItem>
                                             <ListItem sx={{ display: 'list-item', marginLeft: "1rem" }}>
-                                                <ListItemText primary="REACT" />
+                                                <ListItemText primary="PYTHON" />
+                                            </ListItem> 
+                                            <ListItem sx={{ display: 'list-item', marginLeft: "1rem" }}>
+                                                <ListItemText primary="REACTJS" />
                                             </ListItem>
                                             <ListItem sx={{ display: 'list-item', marginLeft: "1rem" }}>
-                                                <ListItemText primary="PYTHON" />
+                                                <ListItemText primary="SYMFONY" />
                                             </ListItem>
                                             <ListItem sx={{ display: 'list-item', marginLeft: "1rem" }}>
                                                 <ListItemText primary="HTML/CSS" />
