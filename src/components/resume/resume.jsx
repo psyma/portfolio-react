@@ -82,7 +82,7 @@ export default class Resume extends Component {
                             <Grid item xs={12} md={4} lg={4}>
                                 <Stack spacing={2}>
                                     <div>
-                                        <Avatar alt="Profile picture" src="./assets/profile.png" sx={{ width: "200px", height: "200px", borderRadius: "5%" }} />
+                                        <Avatar alt="Profile picture" src="./assets/profile.jpg" sx={{ width: "200px", height: "200px", borderRadius: "5%" }} />
                                         <Typography variant="h6">
                                             Rickben Anthony Gimeda
                                         </Typography>
@@ -279,61 +279,61 @@ export default class Resume extends Component {
                                         </Typography>
                                         <List dense={true} sx={{ listStyleType: 'disc' }}>
                                             <ListItem sx={{ display: 'list-item', marginLeft: "1rem" }}>
-                                                <ListItemText primary={  
-                                                    <div style={{ display: "flex", alignItems: "center"}}>
-                                                        <TbBrandCpp style={{marginRight: "0.5rem", fontSize: "large"}}/>
+                                                <ListItemText primary={
+                                                    <div style={{ display: "flex", alignItems: "center" }}>
+                                                        <TbBrandCpp style={{ marginRight: "0.5rem", fontSize: "large" }} />
                                                         C/C++
                                                     </div>
                                                 } />
                                             </ListItem>
                                             <ListItem sx={{ display: 'list-item', marginLeft: "1rem" }}>
-                                            <ListItemText primary={  
-                                                    <div style={{ display: "flex", alignItems: "center"}}>
-                                                        <FaPython style={{marginRight: "0.5rem", fontSize: "large"}}/>
+                                                <ListItemText primary={
+                                                    <div style={{ display: "flex", alignItems: "center" }}>
+                                                        <FaPython style={{ marginRight: "0.5rem", fontSize: "large" }} />
                                                         PYTHON
                                                     </div>
                                                 } />
-                                            </ListItem> 
+                                            </ListItem>
                                             <ListItem sx={{ display: 'list-item', marginLeft: "1rem" }}>
-                                            <ListItemText primary={  
-                                                    <div style={{ display: "flex", alignItems: "center"}}>
-                                                        <RiReactjsFill style={{marginRight: "0.5rem", fontSize: "large"}}/>
+                                                <ListItemText primary={
+                                                    <div style={{ display: "flex", alignItems: "center" }}>
+                                                        <RiReactjsFill style={{ marginRight: "0.5rem", fontSize: "large" }} />
                                                         REACTJS
                                                     </div>
                                                 } />
                                             </ListItem>
                                             <ListItem sx={{ display: 'list-item', marginLeft: "1rem" }}>
-                                            <ListItemText primary={  
-                                                    <div style={{ display: "flex", alignItems: "center"}}>
-                                                        <FaSymfony style={{marginRight: "0.5rem", fontSize: "large"}}/>
+                                                <ListItemText primary={
+                                                    <div style={{ display: "flex", alignItems: "center" }}>
+                                                        <FaSymfony style={{ marginRight: "0.5rem", fontSize: "large" }} />
                                                         SYMFONY
                                                     </div>
                                                 } />
                                             </ListItem>
                                             <ListItem sx={{ display: 'list-item', marginLeft: "1rem" }}>
-                                            <ListItemText primary={  
-                                                    <div style={{ display: "flex", alignItems: "center"}}>
-                                                        <PiFileHtmlBold style={{marginRight: "0.5rem", fontSize: "large"}}/>
+                                                <ListItemText primary={
+                                                    <div style={{ display: "flex", alignItems: "center" }}>
+                                                        <PiFileHtmlBold style={{ marginRight: "0.5rem", fontSize: "large" }} />
                                                         HTML/CSS
                                                     </div>
                                                 } />
                                             </ListItem>
                                             <ListItem sx={{ display: 'list-item', marginLeft: "1rem" }}>
-                                            <ListItemText primary={  
-                                                    <div style={{ display: "flex", alignItems: "center"}}>
-                                                        <IoLogoJavascript style={{marginRight: "0.5rem", fontSize: "large"}}/>
+                                                <ListItemText primary={
+                                                    <div style={{ display: "flex", alignItems: "center" }}>
+                                                        <IoLogoJavascript style={{ marginRight: "0.5rem", fontSize: "large" }} />
                                                         JAVASCRIPT
                                                     </div>
                                                 } />
                                             </ListItem>
                                             <ListItem sx={{ display: 'list-item', marginLeft: "1rem" }}>
-                                                <ListItemText primary={  
-                                                    <div style={{ display: "flex", alignItems: "center"}}>
-                                                        <SiCsharp style={{marginRight: "0.5rem", fontSize: "large"}}/>
+                                                <ListItemText primary={
+                                                    <div style={{ display: "flex", alignItems: "center" }}>
+                                                        <SiCsharp style={{ marginRight: "0.5rem", fontSize: "large" }} />
                                                         C# .NET & C# ASP.NET CORE
                                                     </div>
                                                 } />
-                                             </ListItem>
+                                            </ListItem>
                                         </List>
                                     </div>
                                 </Stack>

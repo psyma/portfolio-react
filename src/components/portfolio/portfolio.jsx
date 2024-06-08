@@ -61,7 +61,7 @@ export default class Portfolio extends Component {
                         <Grid container>
                             <Grid item xs={12} md={4} lg={4} >
                                 <Stack spacing={2}>
-                                    <Avatar alt="Profile picture" src="./assets/profile.png" sx={{ width: 200, height: 200, alignSelf: "center", borderRadius: "5%" }} />
+                                    <Avatar alt="Profile picture" src="./assets/profile.jpg" sx={{ width: 200, height: 200, alignSelf: "center", borderRadius: "5%" }} />
                                     <Typography style={{ textIndent: "10%", textAlign: "justify" }}>
                                         My name is Rickben Anthony Q. Gimeda, and I began my programming career during my second year of the Bachelor of Science in Computer Engineering program in 2018. Initially, I encountered significant challenges in my programming classes. However, over time, I developed a deep appreciation for the field and its potential. This newfound passion ultimately led me to pursue a career as a programmer.
                                     </Typography>
@@ -109,7 +109,7 @@ export default class Portfolio extends Component {
                                                             PUZZLE GAME
                                                         </Typography>
                                                         <Typography variant="body2" sx={{ textAlign: "justify" }}>
-                                                        The Puzzle Game is the most recent project I developed using C#. I created this game in March 2020 during the early stages of the lockdown as a way to stay productive. The game follows the traditional puzzle format, requiring players to arrange pieces correctly to achieve victory.
+                                                            The Puzzle Game is the most recent project I developed using C#. I created this game in March 2020 during the early stages of the lockdown as a way to stay productive. The game follows the traditional puzzle format, requiring players to arrange pieces correctly to achieve victory.
                                                             <Link href="https://github.com/PSYMA/Puzzle-Game-CSharp-WPF" underline="none" target="_blank" sx={{ marginLeft: "0.2rem" }}>source code</Link>
                                                         </Typography>
                                                     </CardContent>
@@ -125,7 +125,7 @@ export default class Portfolio extends Component {
                                                             TIC TAC TOE
                                                         </Typography>
                                                         <Typography variant="body2" sx={{ textAlign: "justify" }}>
-                                                        This Tic Tac Toe Game was my preliminary project for my C# programming course in college. Unlike traditional Tic Tac Toe, this version includes additional features and enhanced graphics. However, the fundamental rules of the game remain the same.
+                                                            This Tic Tac Toe Game was my preliminary project for my C# programming course in college. Unlike traditional Tic Tac Toe, this version includes additional features and enhanced graphics. However, the fundamental rules of the game remain the same.
                                                             <Link href="https://github.com/PSYMA/TIC-TAC-TOE-CSharp-WPF" underline="none" target="_blank" sx={{ marginLeft: "0.2rem" }}>source code</Link>
                                                         </Typography>
                                                     </CardContent>
