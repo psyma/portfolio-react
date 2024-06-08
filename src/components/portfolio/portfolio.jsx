@@ -168,7 +168,7 @@ export default class Portfolio extends Component {
                                                         sx={{ objectFit: "fill", aspectRatio: "2.5" }}
                                                         component="img"
                                                         image="./assets/thumbnails/csLibrary.png"
-                                                        title="The pong game" />
+                                                        title="GUI Library system" />
                                                     <CardContent>
                                                         <Typography gutterBottom variant="h5" component="div">
                                                             LIBRARY SYSTEM GUI
@@ -220,7 +220,7 @@ export default class Portfolio extends Component {
                                                         sx={{ objectFit: "fill", aspectRatio: "2.5" }}
                                                         component="img"
                                                         image="./assets/thumbnails/codeflowerhorn.png"
-                                                        title="puzzle game" />
+                                                        title="CodeFlowerHorn" />
                                                     <CardContent>
                                                         <Typography gutterBottom variant="h5" component="div">
                                                             WEBSITE BLOG
