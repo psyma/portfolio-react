@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import {
-    AppBar, Box, Button, Toolbar, IconButton, Typography, Menu, MenuItem
+    AppBar, Box, Button, Toolbar, IconButton, Typography, Tooltip, Menu, MenuItem
 } from '@mui/material';
 
 import { Link } from "react-router-dom";
 import MoreIcon from '@mui/icons-material/MoreVert';
-import Brightness4Icon from "@mui/icons-material/Brightness4";
-import Brightness7Icon from "@mui/icons-material/Brightness7";
+import LightModeIcon from '@mui/icons-material/LightMode';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
 
 import { Utils } from "../../utils";
 
@@ -16,6 +16,7 @@ export default class Header extends Component {
 
         this.state = {
             anchorEl: null,
+            isDark: false,
             themeMode: Utils.themeMode,
             mobileMoreAnchorEl: null,
             isMenuOpen: false,
@@ -95,13 +96,17 @@ export default class Header extends Component {
     handleThemeMode = async (event) => {
         if (this.state.themeMode == "light") {
             await this.setState({
+                isDark: true,
                 themeMode: "dark"
             })
+            localStorage.theme = "dark"
         }
         else {
             await this.setState({
+                isDark: false,
                 themeMode: "light"
             })
+            localStorage.theme = "light"
         }
         this.props.setThemeMode(this.state.themeMode)
         Utils.themeMode = this.state.themeMode
@@ -122,17 +127,21 @@ export default class Header extends Component {
                         <Button component={Link} to={'/portfolio'} variant="contained">
                             PORTFOLIO
                         </Button>
-                        <IconButton color="inherit" onClick={this.handleThemeMode}>
-                            {this.state.themeMode === "dark" ? <Brightness7Icon /> : <Brightness4Icon />}
-                        </IconButton>
+                        <Tooltip title={this.state.isDark ? "Light mode" : "Dark mode"}>
+                            <IconButton color="inherit" onClick={this.handleThemeMode}>
+                                {this.state.themeMode === "dark" ? <LightModeIcon /> : <DarkModeIcon />}
+                            </IconButton>
+                        </Tooltip>
                     </Box>
                     <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
                         <IconButton size="large" aria-label="show more" aria-controls={this.mobileMenuId} aria-haspopup="true" onClick={this.handleMobileMenuOpen}>
                             <MoreIcon />
                         </IconButton>
-                        <IconButton color="inherit" onClick={this.handleThemeMode}>
-                            {this.state.themeMode === "dark" ? <Brightness7Icon /> : <Brightness4Icon />}
-                        </IconButton>
+                        <Tooltip title={this.state.isDark ? "Light mode" : "Dark mode"}>
+                            <IconButton color="inherit" onClick={this.handleThemeMode}>
+                                {this.state.themeMode === "dark" ? <LightModeIcon /> : <DarkModeIcon />}
+                            </IconButton>
+                        </Tooltip>
                     </Box>
                 </Toolbar>
             </AppBar>

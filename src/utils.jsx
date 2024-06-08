@@ -1,3 +1,7 @@
+if (localStorage.theme == undefined) {
+    localStorage.theme = "dark"
+}
+
 export class Utils {
-    static themeMode = "light"
+    static themeMode = localStorage.theme
 }
