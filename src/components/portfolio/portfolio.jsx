@@ -1,6 +1,6 @@
 import { Component } from "react";
 import {
-    Avatar, Box, Card, CardMedia, CardContent, Container, Grid, Link, Paper, Stack, Typography, Tabs, Tab,
+    Avatar, Box, Card, CardMedia, CardContent, Container, Grid, Link, Stack, Typography, Tab,
     CssBaseline
 } from "@mui/material";
 

@@ -1,6 +1,6 @@
 import { Component } from "react";
 import {
-    Avatar, IconButton, Container, Grid, Link, List, ListItem, ListItemText, Paper, Stack, Tooltip, Typography, CssBaseline
+    Avatar, IconButton, Container, Grid, Link, List, ListItem, ListItemText, Stack, Tooltip, Typography, CssBaseline
 } from '@mui/material';
 
 import Header from "../header/header";
@@ -22,6 +22,7 @@ import { FaSymfony } from "react-icons/fa";
 import { PiFileHtmlBold } from "react-icons/pi";
 import { IoLogoJavascript } from "react-icons/io5";
 import { SiCsharp } from "react-icons/si";
+import { SiRubyonrails } from "react-icons/si";
 
 export default class Resume extends Component {
     constructor(props) {
@@ -105,6 +106,12 @@ export default class Resume extends Component {
                                             <GitHubIcon style={{ marginRight: "0.2rem" }} />
                                             <Link href="https://github.com/psyma" underline="none" target="_blank" style={{ marginTop: "auto", marginBottom: "auto" }}>
                                                 github.com/psyma
+                                            </Link>
+                                        </div>
+                                        <div style={{ display: "flex" }}>
+                                            <GitHubIcon style={{ marginRight: "0.2rem" }} />
+                                            <Link href="https://github.com/codeflowerhorn" underline="none" target="_blank" style={{ marginTop: "auto", marginBottom: "auto" }}>
+                                                github.com/codeflowerhorn
                                             </Link>
                                         </div>
                                         <div style={{ display: "flex" }}>
@@ -227,8 +234,8 @@ export default class Resume extends Component {
                                             </ListItem>
                                             <ListItem sx={{ display: 'list-item', marginLeft: "1rem" }}>
                                                 <ListItemText
-                                                    primary="AI PROJECTS"
-                                                    secondary="Project(s) powered by artificial intelligent e.g object detections, segmentation, tracking & etc" />
+                                                    primary={<s><Typography>AI PROJECTS</Typography></s>}
+                                                    secondary={<s><Typography>Project(s) powered by artificial intelligent e.g object detections, segmentation, tracking, llm & etc</Typography></s>} />
                                             </ListItem>
                                             <ListItem sx={{ display: 'list-item', marginLeft: "1rem" }}>
                                                 <ListItemText
@@ -307,6 +314,14 @@ export default class Resume extends Component {
                                                     <div style={{ display: "flex", alignItems: "center" }}>
                                                         <FaSymfony style={{ marginRight: "0.5rem", fontSize: "large" }} />
                                                         SYMFONY
+                                                    </div>
+                                                } />
+                                            </ListItem>
+                                            <ListItem sx={{ display: 'list-item', marginLeft: "1rem" }}>
+                                                <ListItemText primary={
+                                                    <div style={{ display: "flex", alignItems: "center" }}>
+                                                        <SiRubyonrails style={{ marginRight: "0.5rem", fontSize: "large" }} />
+                                                        RUBY ON RAILS
                                                     </div>
                                                 } />
                                             </ListItem>
