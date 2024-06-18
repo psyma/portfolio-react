@@ -18,8 +18,8 @@ export default class Footer extends Component {
         return <>
             <Container sx={{ display: "flex", justifyContent: "center", flexDirection: { xs: "column", md: "row" }, alignItems: "center" }}  >
                 <Typography sx={{ display: "flex", mr: 1, mb: "1rem" }}>
-                    <CopyrightIcon style={{ fontSize: "smaller", marginTop: "auto", marginBottom: "auto" }} />
-                    <small> {new Date().getFullYear()} Portfolio-React. All rights reserved.</small>
+                    <CopyrightIcon />
+                    {new Date().getFullYear()} Portfolio-React. All rights reserved
                 </Typography>
             </Container>
         </>

@@ -52,38 +52,35 @@ export default class Resume extends Component {
         })
     }
 
-    handleDownloadResume = async () => {
-        let btn = document.getElementById("downloadIcon")
-        let header = document.getElementById("header")
+    handleDownloadResume = async () => {  
+        let btn = document.getElementById("downloadIcon") 
         let element = document.getElementById("resume")
 
         const options = {
-            filename: 'resume.pdf',
+            filename: 'document.pdf',
             margin: 0,
             image: { type: 'jpeg', quality: 1 },
             html2canvas: { scale: 2 },
-            jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' },
+            jsPDF: { unit: 'in', format: 'a3', orientation: 'portrait' },
         };
 
-        btn.style.display = "none"
-        header.style.display = "none"
+        btn.style.display = "none" 
         await html2pdf().set(options).from(element).save()
-        btn.style.display = "inline-block"
-        header.style.display = "flex"
+        btn.style.display = "inline-block"  
     }
 
     render() {
         return <>
             <ThemeProvider theme={this.state.theme}>
                 <CssBaseline />
-                <div id="resume">
+                <div>
                     <Header title="RESUME" setThemeMode={this.setThemeMode} />
-                    <Container sx={{ mt: "1rem" }}>
+                    <Container id="resume" sx={{ mt: "1rem" }}>
                         <Grid container>
                             <Grid item xs={12} md={4} lg={4}>
                                 <Stack spacing={2}>
                                     <div>
-                                        <Avatar alt="Profile picture" src="./assets/profile.jpg" sx={{ width: "200px", height: "200px", borderRadius: "5%" }} />
+                                        <Avatar alt="Profile picture" src="./assets/profile.png" sx={{ width: "200px", height: "200px", borderRadius: "5%" }} />
                                         <Typography variant="h6">
                                             Rickben Anthony Gimeda
                                         </Typography>
@@ -220,7 +217,8 @@ export default class Resume extends Component {
                                             PROJECTS
                                         </Typography>
                                         <Typography sx={{ textAlign: "justify" }}>
-                                            I am responsible for developing and maintaining a variety of projects. Additionally, I study and integrate third-party programs and open-source libraries into our existing projects to enhance their functionality and performance.                                        </Typography>
+                                            I am responsible for developing and maintaining a variety of projects. Additionally, I study and integrate third-party programs and open-source libraries into our existing projects to enhance their functionality and performance.     
+                                        </Typography>
                                         <List dense={true} sx={{ listStyleType: 'disc' }}>
                                             <ListItem sx={{ display: 'list-item', marginLeft: "1rem" }}>
                                                 <ListItemText
@@ -234,8 +232,8 @@ export default class Resume extends Component {
                                             </ListItem>
                                             <ListItem sx={{ display: 'list-item', marginLeft: "1rem" }}>
                                                 <ListItemText
-                                                    primary={<s><Typography>AI PROJECTS</Typography></s>}
-                                                    secondary={<s><Typography>Project(s) powered by artificial intelligent e.g object detections, segmentation, tracking, llm & etc</Typography></s>} />
+                                                    primary={<s>AI PROJECTS</s>}
+                                                    secondary={<s>Project(s) powered by artificial intelligent e.g object detections, segmentation, tracking, llm & etc</s>} />
                                             </ListItem>
                                             <ListItem sx={{ display: 'list-item', marginLeft: "1rem" }}>
                                                 <ListItemText
